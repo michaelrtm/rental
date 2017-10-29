@@ -10,7 +10,7 @@ class BookingsController extends Controller
 {
     public function show($id)
     {
-        $booking = Booking::findOrFail($id)->first();
+        $booking = Booking::findOrFail($id);
         return view('bookings.show', compact('booking'));
     }
 

@@ -9,7 +9,7 @@ class PumpsController extends Controller
 {
     public function show($id)
     {
-        $pump = Pump::find($id)->firstOrFail();
+        $pump = Pump::findOrFail($id);
         return view('pumps.show', compact('pump'));
     }
 }
